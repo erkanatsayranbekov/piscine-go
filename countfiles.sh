@@ -1,3 +1,3 @@
 #!/bin/bash
-find * | wc -l
+find . | wc -l
 
