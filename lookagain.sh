@@ -1,3 +1,3 @@
 #!/bin/bash
-find -name '*.sh' | sed s/...$//
+find -name '*.sh' | sed s/^..//  |sed s/...$//
 
