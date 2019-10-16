@@ -9,7 +9,7 @@ func main() {
 	for y := 'z'; y >= 'a'; y-- {
 		z01.PrintRune(y)
 		if y == 'a' {
-			z01.PrintRune('\n')
+			z01.PrintRune(10)
 		}
 	}
 }
