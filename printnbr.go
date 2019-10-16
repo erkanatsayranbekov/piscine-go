@@ -7,7 +7,7 @@ import (
 func PrintNbr(n int) {
 	if n <= 0 {
 		z01.PrintRune('-')
-		Help(n * -1)
+		Help(n * (-1))
 	} else {
 		Help(n)
 	}
