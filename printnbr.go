@@ -1,16 +1,29 @@
-package main
+package piscine
 
 import (
-	"fmt"
-
 	"github.com/01-edu/z01"
 )
 
 func PrintNbr(n int) {
-	fmt.Printf("%d", n)
-
+	if n < 0 {
+		z01.PrintRune('-')
+		Help(n * -1)
+		z01.PrintRune(10)
+	} else {
+		Help(n)
+		z01.PrintRune(10)
+	}
 }
 
-func main() {
-	z01.PrintRune(10)
+func Help(n int) {
+	div := n % 10
+	var x rune = '0'
+	for i := 1; i <= div; i++ {
+		x++
+	}
+	if div == 0 {
+		return
+	}
+	Help(n / 10)
+	z01.PrintRune(x)
 }
