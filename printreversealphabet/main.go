@@ -1,6 +1,8 @@
 package main
 
-import "z01"
+import (
+	"z01"
+)
 
 func main() {
 
@@ -9,7 +11,5 @@ func main() {
 		z01.PrintRune(y)
 
 	}
-
-	z01.PrintRune('\n')
 
 }
