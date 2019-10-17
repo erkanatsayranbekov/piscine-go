@@ -16,5 +16,5 @@ func StrRev(s string) {
 		nrune[j] = rune(s[i])
 		j++
 	}
-	return string(nrune)
+	return string (nrune)
 }
