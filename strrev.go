@@ -9,7 +9,7 @@ func StrLen(str string) int {
 	return a
 }
 
-func StrRev(s string) {
+func StrRev(s string) string {
 	j := 0
 	nrune := []rune(s)
 	for i := StrLen(s); i >= 0; i-- {
