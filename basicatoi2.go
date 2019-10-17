@@ -25,7 +25,7 @@ var m = map[rune]int{
 func BasicAtoi(s string) int {
 
 	if StrLen(s) == 0 {
-		return
+		return 0
 	}
 
 	var di int
@@ -33,7 +33,7 @@ func BasicAtoi(s string) int {
 		if d, ok := m[digit]; ok {
 			di = (di * 10) + d
 		} else {
-			return
+			return 0
 		}
 	}
 	return di
