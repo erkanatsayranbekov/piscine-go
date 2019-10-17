@@ -1,10 +1,11 @@
 package piscine
 
-import (
-	"fmt"
-)
+func StrLen(str string) int {
+	a := 0
+	s := []rune(str)
+	for i := range s {
+		a = i
+	}
+	return a + 1
 
-func StrLen(str string) {
-	a := len(str)
-	fmt.Println(a)
 }
