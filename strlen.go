@@ -1,4 +1,4 @@
-package main
+package piscine
 
 import (
 	"fmt"
@@ -7,9 +7,4 @@ import (
 func StrLen(str string) {
 	a := len(str)
 	fmt.Println(a)
-}
-
-func main() {
-	str := "Hello World!"
-	StrLen(str)
 }
