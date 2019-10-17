@@ -22,8 +22,7 @@ var m = map[rune]int{
 	'9': 9,
 }
 
-func BasicAtoi(s string) int {
-
+func BasicAtoi2(s string) int {
 	if StrLen(s) == 0 {
 		return 0
 	}
