@@ -10,10 +10,10 @@ func StrLen(str string) int {
 
 func StrRev(s string) string {
 	j := 0
-	nrune := []rune(s)
+	revstr := []rune(s)
 	for i := StrLen(s); i >= 0; i-- {
-		nrune[j] = rune(s[i])
+		revstr[j] = rune(s[i])
 		j++
 	}
-	return string(nrune)
+	return string(revstr)
 }
