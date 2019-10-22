@@ -4,11 +4,13 @@ func TrimAtoi(s string) int {
 	array := []rune{}
 	result := 0
 	sign := 1
+	error := 0
 	for _, i := range s {
-		if i == '-' {
+		if i == '-' && error == 0 {
 			sign = -1
 		} else if i >= '0' && i <= '9' {
 			array = append(array, i)
+			error++
 		} else {
 			continue
 		}
