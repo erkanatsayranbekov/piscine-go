@@ -29,7 +29,7 @@ func PrintNbrInOrder(n int) {
 		for _, i := range array {
 			z01.PrintRune(rune(i + 48))
 		}
+	} else if n == 0 {
+		z01.PrintRune('0')
 	}
-} else if n == 0 {
-	z01.PrintRune('0')
 }
