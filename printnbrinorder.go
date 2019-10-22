@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func SortIntegerTable(table []int) []int {
+func Sort(table []int) []int {
 	a := 0
 	for i := range table {
 		a = i
@@ -25,7 +25,7 @@ func PrintNbrInOrder(n int) {
 		for i := n; i > 0; i /= 10 {
 			array = append(array, i%10)
 		}
-		array = SortIntegerTable(array)
+		array = Sort(array)
 		for _, i := range array {
 			z01.PrintRune(rune(i + 48))
 		}
