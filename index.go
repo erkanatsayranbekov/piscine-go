@@ -1,37 +1,28 @@
 package piscine
 
-func Len(s string) int {
-	l := 0
-	for range s {
-		l++
-	}
-	return l
-}
+// import "fmt"
 
 func Index(s string, toFind string) int {
-	result := -1
-	lenS := Len(s)
-	lenF := Len(toFind)
-	arrS := []rune(s)
-	arrF := []rune(toFind)
-	if s == "" {
-		return 0
+	var rune rune
+	for _, i := range toFind {
+		rune = i
+		break
 	}
-	for index, letter := range s {
-		if letter == arrF[0] && index+lenF <= lenS {
-			j := 0
-			count := 0
-			for i := index; i < lenF; i++ {
-				if arrS[i] == arrF[j] {
-					count++
-				}
-				j++
-			}
-			if count == j {
-				result = index
-				break
-			}
+
+	index := 0
+	for j, i := range s {
+		if i == rune {
+			index = j
+			break
+		} else {
+			index = -1
 		}
 	}
-	return result
+	return index
 }
+
+// func main() {
+// 	fmt.Println(Index("Hello!", "l"))
+// 	fmt.Println(Index("Salut!", "alu"))
+// 	fmt.Println(Index("Ola!", "hO"))
+// }
