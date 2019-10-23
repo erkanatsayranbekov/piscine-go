@@ -34,6 +34,6 @@ func main() {
 		for _, j := range q {
 			z01.PrintRune(j)
 		}
-		z01.PrintRune(10)
+		z01.PrintRune('\n')
 	}
 }
