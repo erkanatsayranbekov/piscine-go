@@ -6,11 +6,16 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func SortIntegerTable(table []string) []string {
-	a := 0
+func Len(table []string) int {
+	len := 0
 	for range table {
-		a++
+		len++
 	}
+	return len
+}
+
+func SortTable(table []string) []string {
+	a := Len(table)
 	for i := 0; i < a; i++ {
 		for j := 0; j < a; j++ {
 			if table[i] < table[j] {
@@ -21,13 +26,10 @@ func SortIntegerTable(table []string) []string {
 	return table
 }
 func main() {
-	len := 0
 	s := os.Args[1:]
-	SortIntegerTable(s)
-	for range s {
-		len++
-	}
-	for a := 1; a <= len; a++ {
+	SortTable(s)
+	l := Len(s)
+	for a := 0; a < l; a++ {
 		q := s[a]
 		for _, j := range q {
 			z01.PrintRune(j)
