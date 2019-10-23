@@ -18,7 +18,7 @@ func Index(s string, toFind string) int {
 	if lf > 0 {
 		for j, i := range as {
 			if i == af[0] && j+lf <= ls && count == 0 {
-				for k := j; k < j+lf; k++ {
+				for k := j; k <= j+lf; k++ {
 					for m := 0; m <= lf-1; m++ {
 						if as[k] == af[m] {
 							index = j
