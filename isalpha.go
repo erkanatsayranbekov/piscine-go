@@ -1,17 +1,13 @@
 package piscine
 
-func LetterOrNumber(s rune) bool {
-	if s >= 'a' && s <= 'z' || s >= 'A' && s <= 'Z' || s >= '0' && s <= '9' {
-		return true
-	}
-	return false
-}
-
 func IsAlpha(str string) bool {
-	for _, value := range str {
-		if !LetterOrNumber(value) {
+	var result bool
+	for _, j := range str {
+		if j >= 'a' && j <= 'z' || j >= 'A' && j <= 'Z' || j >= '0' && j <= '9' {
+			result = true
+		} else {
 			return false
 		}
 	}
-	return true
+	return result
 }
