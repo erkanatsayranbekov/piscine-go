@@ -11,7 +11,7 @@ func SplitWhiteSpaces(str string) []string {
 	last := 0
 	m := 0
 	for i, e := range str {
-		if e == ' ' && i != last+1 || e == '	' && i != last+1 || e == '\n' && i != last+1 {
+		if e == ' ' && i != last || e == '	' && i != last || e == '\n' && i != last {
 			result[m] = string(str[last:i])
 			last = i + 1
 			m++
