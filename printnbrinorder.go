@@ -3,26 +3,24 @@ package piscine
 import "github.com/01-edu/z01"
 
 func Sort(table []int) []int {
-	a := 0
-	for i := range table {
-		a = i
-		a++
+	l := 0
+	for range table {
+		l++
 	}
-	for i := 0; i < a; i++ {
-		for j := 0; j < a; j++ {
+	for i := 0; i < l; i++ {
+		for j := 0; j < l; j++ {
 			if table[i] < table[j] {
 				table[i], table[j] = table[j], table[i]
 			}
 		}
-
 	}
 	return table
 }
 
 func PrintNbrInOrder(n int) {
 	if n > 0 {
-		array := []int{}
-		for i := n; i > 0; i /= 10 {
+		var array []int
+		for i := n; i > 0; i = i / 10 {
 			array = append(array, i%10)
 		}
 		array = Sort(array)
