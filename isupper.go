@@ -1,17 +1,13 @@
 package piscine
 
-func UpperRune(s rune) bool {
-	if s >= 'A' && s <= 'Z' {
-		return true
-	}
-	return false
-}
-
 func IsUpper(str string) bool {
-	for _, value := range str {
-		if !UpperRune(value) {
+	var result bool
+	for _, j := range str {
+		if j >= 'A' && j <= 'Z' {
+			result = true
+		} else {
 			return false
 		}
 	}
-	return true
+	return result
 }
