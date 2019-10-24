@@ -19,7 +19,6 @@ func SplitWhiteSpaces(str string) []string {
 			last = i + 1
 		}
 	}
-}
 	result[l] = string(str[last:])
 	return result
 }
