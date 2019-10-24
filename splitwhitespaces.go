@@ -15,6 +15,8 @@ func SplitWhiteSpaces(str string) []string {
 			result[m] = string(str[last:i])
 			last = i + 1
 			m++
+		} else {
+			continue
 		}
 	}
 	result[l] = string(str[last:])
