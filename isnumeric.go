@@ -1,17 +1,13 @@
 package piscine
 
-func Number(s rune) bool {
-	if s >= '0' && s <= '9' {
-		return true
-	}
-	return false
-}
-
 func IsNumeric(str string) bool {
-	for _, value := range str {
-		if !Number(value) {
+	var result bool
+	for _, j := range str {
+		if j >= '0' && j <= '9' {
+			result = true
+		} else {
 			return false
 		}
 	}
-	return true
+	return result
 }
