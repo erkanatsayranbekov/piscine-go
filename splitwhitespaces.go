@@ -15,10 +15,11 @@ func SplitWhiteSpaces(str string) []string {
 			result[m] = string(str[last:i])
 			last = i + 1
 			m++
-		} else  e == ' ' && i == last || e == '	' && i == last || e == '\n' && i == last {
-			last = i +1
+		} else if e == ' ' && i == last || e == '	' && i == last || e == '\n' && i == last {
+			last = i + 1
 		}
 	}
+}
 	result[l] = string(str[last:])
 	return result
 }
