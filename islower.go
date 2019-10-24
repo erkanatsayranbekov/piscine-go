@@ -1,17 +1,13 @@
 package piscine
 
-func LowerRune(s rune) bool {
-	if s >= 'a' && s <= 'z' {
-		return true
-	}
-	return false
-}
-
 func IsLower(str string) bool {
-	for _, value := range str {
-		if !LowerRune(value) {
+	var result bool
+	for _, j := range str {
+		if j >= 'a' && j <= 'z' {
+			result = true
+		} else {
 			return false
 		}
 	}
-	return true
+	return result
 }
