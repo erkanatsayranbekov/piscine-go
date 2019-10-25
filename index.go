@@ -1,6 +1,6 @@
 package piscine
 
-func StrLen(s string) int {
+func Len(s string) int {
 	l := 0
 	for range s {
 		l++
@@ -10,8 +10,8 @@ func StrLen(s string) int {
 
 func Index(s string, toFind string) int {
 	result := -1
-	lenS := StrLen(s)
-	lenF := StrLen(toFind)
+	lenS := Len(s)
+	lenF := Len(toFind)
 	arrS := []rune(s)
 	arrF := []rune(toFind)
 	if s == "" {
