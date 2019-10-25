@@ -1,34 +1,37 @@
 package piscine
 
-func Len(table []rune) int {
-	len := 0
-	for range table {
-		len++
+func Len(s string) int {
+	l := 0
+	for range s {
+		l++
 	}
-	return len
+	return l
 }
 
 func Index(s string, toFind string) int {
-	as := []rune(s)
-	af := []rune(toFind)
-	ls := Len(as)
-	lf := Len(af)
-	index := -1
-	count := 0
-	if lf > 0 {
-		for j, i := range as {
-			if i == af[0] && j+lf <= ls && count == 0 {
-				for k := j; k <= j+lf; k++ {
-					for m := 0; m <= lf-1; m++ {
-						if as[k] == af[m] {
-							index = j
-							count++
-						}
-					}
+	result := -1
+	lenS := Len(s)
+	lenF := Len(toFind)
+	arrS := []rune(s)
+	arrF := []rune(toFind)
+	if s == "" {
+		return 0
+	}
+	for index, letter := range s {
+		if letter == arrF[0] && index+lenF <= lenS {
+			j := 0
+			count := 0
+			for i := index; i < index+lenF; i++ {
+				if arrS[i] == arrF[j] {
+					count++
 				}
+				j++
+			}
+			if count == j {
+				result = index
+				break
 			}
 		}
-		return index
 	}
-	return 0
+	return result
 }
