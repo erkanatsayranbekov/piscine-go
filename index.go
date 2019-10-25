@@ -21,7 +21,7 @@ func Index(s string, toFind string) int {
 		if letter == arrF[0] && index+lenF <= lenS {
 			j := 0
 			count := 0
-			for i := index; i < index+lenF; i++ {
+			for i := index; i < lenF; i++ {
 				if arrS[i] == arrF[j] {
 					count++
 				}
